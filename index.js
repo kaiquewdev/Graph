@@ -33,9 +33,11 @@
         };
 
         self.seed = function () {
-            var self = this;
-            
-            self.internal.edge.push( new Vertex({ level: self.level() + 1 }) );
+            var self = this,
+                vertex = new Vertex();
+           
+            vertex.internal.level = self.internal.level + 1;
+            self.internal.edge.push( vertex );
 
             return self;
         };
@@ -85,6 +87,10 @@
             root = new Vertex();
 
         self.vertex = Vertex;
+
+        self.init = function () {
+            return root;    
+        };
 
         return self;
     };
