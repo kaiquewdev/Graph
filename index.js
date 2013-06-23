@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    var knn = require('./knn'); 
+    var knn = require('knn'); 
 
     var Vertex = function Vertex ( obj ) {
         var self = this,

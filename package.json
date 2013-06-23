@@ -1,0 +1,16 @@
+{
+    "name": "Graph",
+    "version": "0.0.1",
+    "description": "Graph engine prototype.",
+    "keywords": [
+        "data-minering",
+        "machine-learning",
+        "graph-engine"
+    ],
+    "license": "BSD",
+    "url": "https://github.com/kaiquewdev/Graph.git",
+    "main": "./lib/index.js",
+    "dependencies": {
+        "knn": "*"    
+    }
+}

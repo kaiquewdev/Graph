@@ -1,7 +1,9 @@
 # Graph
 
-Experiment for graph engine
+Graph engine prototype.
 
-## Knn
+Use `sudo npm install` to solve dependencies.
 
-Go to knn dir and use `sudo npm install` to install dependencies.
+# Examples
+
+Use `node examples/interest.js` to see the interest example in action. 
