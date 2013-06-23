@@ -1,5 +1,7 @@
 'use strict';
-var root = exports;
+var root = exports,
+    // modules
+    _ = require('lodash');
 
 var distance = root.distance = function ( a, b ) {
     var i = Math.min(a.length, b.length),
@@ -69,6 +71,18 @@ var merge = root.merge = function ( a, b ) {
     return duplicity( o );
 };
 
+var isRegExp = root.isRegExp = function ( v ) {
+    return v.constructor.toString().indexOf('RegExp') > -1;
+};
+
+var isArray = root.isArray = function ( v ) {
+    return v.constructor.toString().indexOf('Array') > -1;    
+};
+
+var isObject = root.isObject = function ( v ) {
+   return v.constructor.toString().indexOf('Object') > -1; 
+};
+
 var hasKey = root.hasKey = function ( o, k ) {
     var out = false,
         obj = detach( o );
@@ -83,9 +97,15 @@ var hasKey = root.hasKey = function ( o, k ) {
 var hasValue = root.hasValue = function ( o, k, v ) {
     var out = false,
         obj = detach( o ),
-        kid = obj.keys.indexOf( k );
+        kid = obj.keys.indexOf( k ),
+        tmpObj = null;
 
-    if ( kid > -1 && obj.values[ kid ] === v ) {
+    if ( kid > -1 && !isRegExp( v ) ) {
+        out = _.isEqual( obj.values[ kid ], v );    
+    } else if ( 
+        kid > -1 && isRegExp( v ) &&
+        obj.values[ kid ].search( v ) > -1
+    ) {
         out = true;    
     }
 

@@ -86,6 +86,24 @@ suite('K-nn', function () {
             );
         });
 
+        test('isRegExp', function () {
+            assert.ok(
+                knn.isRegExp(/simple test/)
+            );
+        });
+
+        test('isArray', function () {
+            assert.ok(
+                knn.isArray([1, 2, 3])
+            );    
+        });
+
+        test('isObject', function () {
+            assert.ok(
+                knn.isObject({ a: 1, b: 2, c: 3 })
+            );    
+        });
+
         test('has key', function () {
             var o = {
                 a: 1,
@@ -100,11 +118,26 @@ suite('K-nn', function () {
         test('has value', function () {
             var o = {
                 a: 1,
-                b: 2
+                b: 2,
+                c: 'simple test',
+                d: [ 1, 2, 3 ],
+                e: { a: 1, b: 2, c: 3 }
             };    
 
             assert.ok(
                 knn.hasValue( o, 'a', 1 )
+            );
+
+            assert.ok(
+                knn.hasValue( o, 'c', /simple/ )
+            );
+
+            assert.ok(
+                knn.hasValue( o, 'd', [ 1, 2, 3 ] )
+            );
+
+            assert.ok(
+                knn.hasValue( o, 'e', { a: 1, b: 2, c: 3 } )
             );
         });
     });

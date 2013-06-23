@@ -11,7 +11,7 @@ root.data({
     interest: {
         genre: 'Action',
         year: 2014,
-        star: 'Eva Green'
+        stars: [ 'Eva Green', 'Duck Dogers' ]
     }    
 });
 
@@ -19,7 +19,7 @@ root.edge( 0 ).data({
     info: {
         name: '300: Rise of an Empire',
         genre: 'Action',
-        star: 'Eva Green',
+        stars: [ 'Eva Green', 'Duck Dogers' ],
         year: 2014
     } 
 });
@@ -28,7 +28,7 @@ root.edge( 1 ).data({
     info: {
         name: 'Man of Steel',
         genre: 'Action',
-        star: 'Henry Cavill',
+        stars: [ 'Henry Cavill' ],
         year: 2013
     }    
 });
