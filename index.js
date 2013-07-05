@@ -1,6 +1,7 @@
 (function () {
     'use strict';
-    var knn = require('knn'); 
+    var knn = require('knn'),
+        _ = require('underscore');
 
     var Vertex = function Vertex ( obj ) {
         var self = this,
@@ -79,17 +80,25 @@
             return out;
         };
 
+        self.find = function ( type, query ) {
+            var nodes = _.where( self.internal['edge'].map(function ( node ) {
+                    return node.data()[ type ];
+                }), query ),
+                out = nodes;
+
+            return out;
+        };
+
         return self;
     };
 
     var Graph = function () {
-        var self = this,
-            root = new Vertex();
+        var self = this;
 
         self.vertex = Vertex;
 
         self.init = function () {
-            return root;    
+            return new Vertex();    
         };
 
         return self;

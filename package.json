@@ -11,6 +11,7 @@
     "url": "https://github.com/kaiquewdev/Graph.git",
     "main": "./lib/index.js",
     "dependencies": {
-        "knn": "*"    
+        "knn": "*",
+        "underscore": "*"
     }
 }

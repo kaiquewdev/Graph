@@ -106,5 +106,12 @@ suite('Graph', function () {
         test('proximity', function () {
             assert.deepEqual( vertex.proximity('interest', 'info'), [ 1 ]);
         });
+
+        test('find', function () {
+            assert.deepEqual(
+                vertex.find( 'info', { age: 17 } ),
+                [ infos[1]['info'] ]
+            );
+        });
     });
 });
