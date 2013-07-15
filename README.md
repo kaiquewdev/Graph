@@ -48,6 +48,14 @@ Graph engine prototype.
 
     wire.find( 'info', { color: 'red' } );
 
+# Verify the level
+
+    wire.edge( 0 ).level();
+
+# Verify if the current node is the root
+
+    wire.isRoot();
+
 # Example
 
     var Jug = require('jug');
@@ -94,3 +102,25 @@ Graph engine prototype.
         distance.join(', '),
         util.inspect( nodeData['info'] )
     );
+
+# To contribute with anithing
+
+First of all:
+
+    git clone https://github.com/kaiquewdev/Graph
+
+enter in the `Graph` directory and run:
+
+    sudo npm install
+
+after all dependencies was solved, install the `mocha`:
+
+    sudo npm install -g mocha
+
+and test:
+
+    mocha -u tdd lib/index.test.js
+
+Yeah, read the code and contribute with ideas or coding.
+
+### Make a good art, with the code.
