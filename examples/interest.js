@@ -1,7 +1,7 @@
-var Graph = require('../');
+var Jug = require('../lib/');
 var util = require('util');
 
-var root = Graph.init();
+var root = Jug.init();
 
 root
     .seed()
