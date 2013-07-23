@@ -74,6 +74,22 @@ Are things, basic I work for the "jug" support. And be more if i can.
 
     wire.isRoot();
 
+# Getting childs of an specified edge
+
+    wire.getChildsOf( 0 );
+
+# Getting parents of an specified level and edge
+    
+    wire.getParentsFrom( 1, 0 );
+
+# Getting the length of childs of an specified edge
+    
+    wire.getScopeOf( 0 );
+
+# Getting siblings of current level, excluding the index indicated
+    
+    wire.getSiblingsOf( 1 );
+
 # Example
 
     var Jug = require('jug');
