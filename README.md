@@ -20,15 +20,15 @@ Some of the features that will be included:
 
 Are things, basic I work for the "jug" support. And be more if i can.
 
-# Installation
+## Installation
 
     npm install jug
 
-# Init the graph
+## Init the graph
 
     var wire = jug.init();
 
-# Init the graph with data
+## Init the graph with data
 
     var wire = jug.init({
         interest: {
@@ -38,11 +38,11 @@ Are things, basic I work for the "jug" support. And be more if i can.
         }
     });
 
-# Seed node
+## Seed node
 
     wire.seed();
 
-# Seed node with data
+## Seed node with data
     
     wire.seed({
         info: {
@@ -52,45 +52,45 @@ Are things, basic I work for the "jug" support. And be more if i can.
         } 
     });
 
-# Access node
+## Access node
 
     wire.edge( 0 );
 
-# Get distance between nodes
+## Get distance between nodes
 
     // first argument is 'from' object
     // second argument is 'to' object
     wire.proximity('interest', 'info');
 
-# Find a node
+## Find a node
 
     wire.find( 'info', { color: 'red' } );
 
-# Verify the level
+## Verify the level
 
     wire.edge( 0 ).level();
 
-# Verify if the current node is the root
+## Verify if the current node is the root
 
     wire.isRoot();
 
-# Getting childs of an specified edge
+## Getting childs of an specified edge
 
     wire.getChildsOf( 0 );
 
-# Getting parents of an specified level and edge
+## Getting parents of an specified level and edge
     
     wire.getParentsFrom( 1, 0 );
 
-# Getting the length of childs of an specified edge
+## Getting the length of childs of an specified edge
     
     wire.getScopeOf( 0 );
 
-# Getting siblings of current level, excluding the index indicated
+## Getting siblings of current level, excluding the index indicated
     
     wire.getSiblingsOf( 1 );
 
-# Example
+## Example
 
     var Jug = require('jug');
     var util = require('util');
@@ -137,7 +137,7 @@ Are things, basic I work for the "jug" support. And be more if i can.
         util.inspect( nodeData['info'] )
     );
 
-# To contribute with anithing
+## To contribute with anithing
 
 First of all:
 
@@ -157,19 +157,19 @@ and test:
 
 Yeah, read the code and contribute with ideas or coding.
 
-# Branch pattern
+## Branch pattern
 
-## Feature
+### Feature
 
     git checkout -b feature/name-of-the-responsability
 
-## Fix
+### Fix
 
     git checkout -b fix/name-of-the-responsability
 
-# Commit pattern
+## Commit pattern
 
     * Title of the feature or fix
     * 80 columns
 
-### Make a good art, with the code.
+#### Make a good art, with the code.
