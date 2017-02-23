@@ -8,7 +8,7 @@
         "graph-engine"
     ],
     "scripts": {
-        "test": "mocha -u tdd lib/*.test.js"
+        "tests": "mocha -u tdd lib/*.test.js"
     },
     "lib": "./lib/index.js",
     "license": "BSD",
