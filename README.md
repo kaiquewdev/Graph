@@ -1,5 +1,7 @@
 # Graph
 
+[![Build Status](https://travis-ci.org/kaiquewdev/Graph.svg?branch=master)](https://travis-ci.org/kaiquewdev/Graph)
+
 Graph engine prototype.
 
 I'm trying to build a graph engine, which works on any database supported by it. 
